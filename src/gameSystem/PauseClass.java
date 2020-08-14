@@ -8,10 +8,11 @@ import javafx.scene.layout.VBox;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import sample.menuActions;
 
-public class pauseClass {
+public class PauseClass {
 
-    private static boolean autoPlay=true;
+
 
 
     public static void  pause(MediaPlayer mediaPlayer) {
@@ -34,11 +35,11 @@ public class pauseClass {
 
         volumeButton.setOnAction(e->{
 
-            if(autoPlay) {
-                autoPlay=false;
+            if(menuActions.autoPlay) {
+                menuActions.autoPlay=false;
                 mediaPlayer.pause();
             } else {
-                autoPlay=true;
+                menuActions.autoPlay=true;
                 mediaPlayer.play();
             }
         });
